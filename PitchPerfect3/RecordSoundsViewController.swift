@@ -18,7 +18,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         stopRecordingButton.isEnabled = false
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -46,9 +45,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecording(_ sender: Any) {
-//        recordButton.isEnabled = true
-//        stopRecordingButton.isEnabled = false
-//        recordingLablel.text = "Tap to Record"
         changeButtonState(isRecording: false)
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
